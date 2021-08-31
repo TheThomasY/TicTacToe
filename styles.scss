@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.player-turn {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.end-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  button {
+    margin: 20px;
+  }
+}
+
+.grid {
+  margin: 20px auto;
+}
+
+td {
+  height: 100px;
+  width: 100px;
+  border: 1px solid black;
+  text-align: center;
+  font-size: 40px;
+  cursor: pointer;
+}
