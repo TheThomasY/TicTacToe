@@ -4,7 +4,36 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <title>TicTacToe</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <h1>Tic-Tac-Toe</h1>
+    </header>
+    <div class="player-turn">It's <span id="to-go"></span>'s go:</div>
+    <div class="end-screen">
+      <h2 id="winner-banner"></h2>
+      <button onclick="Restart()">Play again?</button>
+    </div>
+    <table class="grid">
+      <tr>
+        <td onclick="squareClicked(this)" class="square" id="1"></td>
+        <td onclick="squareClicked(this)" class="square" id="2"></td>
+        <td onclick="squareClicked(this)" class="square" id="3"></td>
+      </tr>
+      <tr>
+        <td onclick="squareClicked(this)" class="square" id="4"></td>
+        <td onclick="squareClicked(this)" class="square" id="5"></td>
+        <td onclick="squareClicked(this)" class="square" id="6"></td>
+      </tr>
+      <tr>
+        <td onclick="squareClicked(this)" class="square" id="7"></td>
+        <td onclick="squareClicked(this)" class="square" id="8"></td>
+        <td onclick="squareClicked(this)" class="square" id="9"></td>
+      </tr>
+    </table>
+
+    <script src="./index.js"></script>
+  </body>
 </html>
