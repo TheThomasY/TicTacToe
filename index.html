@@ -9,12 +9,18 @@
   </head>
   <body>
     <header>
-      <h1>Tic-Tac-Toe</h1>
+      <h1>Tic - Tac - Toe</h1>
+      <div class="player-turn">It's <span id="to-go"></span>'s go:</div>
     </header>
-    <div class="player-turn">It's <span id="to-go"></span>'s go:</div>
-    <div class="end-screen">
-      <h2 id="winner-banner"></h2>
-      <button onclick="Restart()">Play again?</button>
+    <div class="modal" id="winner-modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 id="winner-banner"></h2>
+        </div>
+        <div class="modal-button">
+          <button onclick="Restart()">Play again?</button>
+        </div>
+      </div>
     </div>
     <table class="grid">
       <tr>
