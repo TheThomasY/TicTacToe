@@ -12,13 +12,12 @@ html {
 }
 
 header {
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   text-align: center;
   margin: 20px auto;
   padding: 10px;
   width: 320px;
   border-radius: 10px;
-  background-color: #212a42;
 }
 
 .player-turn {
@@ -114,7 +113,7 @@ header {
 }
 
 .grid {
-  margin: 40px auto;
+  margin: 8vh auto;
   padding: 5px;
   border-radius: 15px;
   border-collapse: separate;
@@ -134,5 +133,19 @@ td {
   cursor: pointer;
   -webkit-box-shadow: inset 0 -6px 0 2px rgba(0, 0, 0, 0.17);
           box-shadow: inset 0 -6px 0 2px rgba(0, 0, 0, 0.17);
+}
+
+@media screen and (max-width: 425px) {
+  td {
+    height: 80px;
+    width: 80px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  td {
+    height: 120px;
+    width: 120px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
