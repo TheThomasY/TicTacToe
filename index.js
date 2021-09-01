@@ -51,10 +51,13 @@ const checkWinner = (icon, id) => {
 };
 
 const gameOver = (winner) => {
+  let winnerModal = document.getElementById('winner-modal');
   let winnerBanner = document.getElementById('winner-banner');
 
+  winnerModal.style.display = 'block';
+
   if (winner) {
-    winnerBanner.innerHTML = 'Congratulations ' + winner;
+    winnerBanner.innerHTML = 'Congratulations, ' + winner + ' is the winner!';
   } else {
     winnerBanner.innerHTML = "It's a draw!";
   }
