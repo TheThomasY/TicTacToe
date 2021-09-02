@@ -90,7 +90,7 @@ header {
 .modal-button button {
   display: inline-block;
   padding: 0.7em 1.4em;
-  margin: 0 0.3em 0.3em 0;
+  margin: 5px 0.5em 0.5em 0;
   border-radius: 5px;
   text-transform: uppercase;
   font-weight: 600;
