@@ -1,36 +1,70 @@
 window.addEventListener('load', (event) => {
-  const icons = ['X', 'O'];
-  let first = icons[Math.round(Math.random())];
-  document.getElementById('to-go').innerHTML = first;
-
+  // On load check if the user had previously changed the colour theme
   if (localStorage.getItem('currentTheme') === 'light') {
     changeTheme();
   } else document.getElementById('check').checked = true;
 });
 
+const icons = ['X', 'O'];
 const winners = ['123', '456', '789', '147', '258', '369', '159', '357'];
+let empty = ['1', '2', '3', '4', '5', '6', '7', '8', '9'];
 let xLocations = '';
 let oLocations = '';
+let next = '';
+let computer = false;
 
-const squareClicked = (square) => {
+const startGame = (players) => {
+  // Once game has started, hide the intro screen
+  document.getElementById('start-modal').style.display = 'none';
+
+  // Randomly decide whether X or O goes first
+  next = icons[Math.round(Math.random())];
+
+  if (players === 2) {
+    document.getElementById('to-go').innerHTML = next + "'s go:";
+  } else {
+    computer = true;
+    document.getElementById('to-go').innerHTML = 'your turn (' + next + '):';
+    if (Math.round(Math.random()) === 0) {
+      let randomSquare = pickRandomSquare();
+      squareClicked(document.getElementById(randomSquare));
+    }
+  }
+};
+
+const squareClicked = (square, clickedBy) => {
+  // Prevent clicks if square full or game over
   if (square.innerHTML) return;
   if (document.getElementById('winner-banner').innerHTML) return;
 
-  let icon = document.getElementById('to-go').innerHTML;
-  square.innerHTML = icon;
-  if (icon === 'X') {
-    document.getElementById('to-go').innerHTML = 'O';
+  // Click is valid so continue:
+
+  // Remove the clicked square from the 'empty' array
+  const index = empty.indexOf(square.id);
+  empty.splice(index, 1);
+
+  // Fill it with the player icon and then change relevant text
+  square.innerHTML = next;
+  if (next === 'X') {
+    document.getElementById('to-go').innerHTML = "O's go:";
+    next = 'O';
     xLocations += square.id;
   } else {
-    document.getElementById('to-go').innerHTML = 'X';
+    document.getElementById('to-go').innerHTML = "X's go:";
+    next = 'X';
     oLocations += square.id;
   }
-  checkWinner(icon, square.id);
+
+  checkWinner(square.innerHTML);
+
+  if (computer && clickedBy === 'player') {
+    squareClicked(document.getElementById(pickRandomSquare()), 'computer');
+  }
 };
 
-const checkWinner = (icon, id) => {
-  // console.log(icon, id);
+const pickRandomSquare = () => empty[Math.floor(Math.random() * empty.length)];
 
+const checkWinner = (icon) => {
   let locations = '';
 
   if (icon === 'X') {
@@ -71,6 +105,7 @@ const Restart = () => {
   window.location.reload();
 };
 
+// Theme changing --------
 const changeTheme = () => {
   let themeSwitch = document.getElementById('theme-name');
   if (themeSwitch.innerHTML === 'Dark Theme') {
