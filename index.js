@@ -2,6 +2,10 @@ window.addEventListener('load', (event) => {
   const icons = ['X', 'O'];
   let first = icons[Math.round(Math.random())];
   document.getElementById('to-go').innerHTML = first;
+
+  if (localStorage.getItem('currentTheme') === 'light') {
+    changeTheme();
+  } else document.getElementById('check').checked = true;
 });
 
 const winners = ['123', '456', '789', '147', '258', '369', '159', '357'];
@@ -68,12 +72,13 @@ const Restart = () => {
 };
 
 const changeTheme = () => {
-  let themeSwitch = document.getElementById('theme-switch');
-  if (themeSwitch.innerHTML === 'Light Theme') {
+  let themeSwitch = document.getElementById('theme-name');
+  if (themeSwitch.innerHTML === 'Dark Theme') {
     document.getElementById('body').classList.add('body-light');
     document.getElementById('modal-header').classList.add('modal-header-light');
     document.getElementById('grid').classList.add('grid-light', 'square-light');
-    themeSwitch.innerHTML = 'Dark Theme';
+    themeSwitch.innerHTML = 'Light Theme';
+    localStorage.setItem('currentTheme', 'light');
   } else {
     document.getElementById('body').classList.remove('body-light');
     document
@@ -82,6 +87,7 @@ const changeTheme = () => {
     document
       .getElementById('grid')
       .classList.remove('grid-light', 'square-light');
-    themeSwitch.innerHTML = 'Light Theme';
+    themeSwitch.innerHTML = 'Dark Theme';
+    localStorage.setItem('currentTheme', 'dark');
   }
 };

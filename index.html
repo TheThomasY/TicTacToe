@@ -11,7 +11,6 @@
     <header>
       <h1>Tic Tac Toe</h1>
       <div class="player-turn">It's <span id="to-go"></span>'s go:</div>
-      <button onclick="changeTheme()" id="theme-switch">Light Theme</button>
     </header>
     <div class="modal" id="winner-modal">
       <div class="modal-content">
@@ -40,6 +39,14 @@
         <td onclick="squareClicked(this)" class="square" id="9"></td>
       </tr>
     </table>
+
+    <div class="theme-switcher">
+      <span class="theme-name" id="theme-name">Dark Theme</span>
+      <label class="switch">
+        <input onclick="changeTheme()" type="checkbox" id="check" />
+        <span class="slider round"></span>
+      </label>
+    </div>
 
     <script src="./index.js"></script>
   </body>
