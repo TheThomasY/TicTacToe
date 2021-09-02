@@ -1,11 +1,22 @@
-// Colour ----
+// Colours for dark theme ----
 $bg: #3b4664;
+$text: white;
 $grid-bg: #212a42;
 $square-bg: #eae3db;
 $icon-colour: #424c5e;
 
 $modal: #647299;
 $modal-btn: #db4838;
+
+// Colours for light theme ----
+$bg-light: #e6e6e6;
+$text-light: black;
+$grid-bg-light: #47658d;
+$square-bg-light: #e5e4e0;
+$icon-colour-light: #3f3e36;
+
+$modal-light: #5c8ecf;
+$modal-btn-light: #c85401;
 
 // Fonts
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
@@ -19,8 +30,16 @@ $modal-btn: #db4838;
 html {
   font-size: 62.5%;
   font-family: 'Roboto', sans-serif;
+}
+
+body {
   background-color: $bg;
-  color: white;
+  color: $text;
+}
+
+.body-light {
+  background-color: $bg-light;
+  color: $text-light;
 }
 
 header {
@@ -80,6 +99,10 @@ header {
   border-top-right-radius: 8px;
 }
 
+.modal-header-light {
+  background-color: $modal-light;
+}
+
 .modal-button {
   padding: 10px 15px;
   text-align: center;
@@ -119,6 +142,10 @@ header {
   background-color: $grid-bg;
 }
 
+.grid-light {
+  background-color: $grid-bg-light;
+}
+
 td {
   height: 100px;
   width: 100px;
@@ -131,6 +158,15 @@ td {
   font-weight: 1000;
   cursor: pointer;
   box-shadow: inset 0 -6px 0 2px rgba(0, 0, 0, 0.17);
+}
+
+.square-light {
+  tr {
+    td {
+      background-color: $square-bg-light;
+      color: $icon-colour-light;
+    }
+  }
 }
 
 @media screen and (max-width: 425px) {

@@ -7,8 +7,16 @@
 html {
   font-size: 62.5%;
   font-family: 'Roboto', sans-serif;
+}
+
+body {
   background-color: #3b4664;
   color: white;
+}
+
+.body-light {
+  background-color: #e6e6e6;
+  color: black;
 }
 
 header {
@@ -70,6 +78,10 @@ header {
   border-top-right-radius: 8px;
 }
 
+.modal-header-light {
+  background-color: #5c8ecf;
+}
+
 .modal-button {
   padding: 10px 15px;
   text-align: center;
@@ -120,6 +132,10 @@ header {
   background-color: #212a42;
 }
 
+.grid-light {
+  background-color: #47658d;
+}
+
 td {
   height: 100px;
   width: 100px;
@@ -133,6 +149,11 @@ td {
   cursor: pointer;
   -webkit-box-shadow: inset 0 -6px 0 2px rgba(0, 0, 0, 0.17);
           box-shadow: inset 0 -6px 0 2px rgba(0, 0, 0, 0.17);
+}
+
+.square-light tr td {
+  background-color: #e5e4e0;
+  color: #3f3e36;
 }
 
 @media screen and (max-width: 425px) {

@@ -66,3 +66,22 @@ const gameOver = (winner) => {
 const Restart = () => {
   window.location.reload();
 };
+
+const changeTheme = () => {
+  let themeSwitch = document.getElementById('theme-switch');
+  if (themeSwitch.innerHTML === 'Light Theme') {
+    document.getElementById('body').classList.add('body-light');
+    document.getElementById('modal-header').classList.add('modal-header-light');
+    document.getElementById('grid').classList.add('grid-light', 'square-light');
+    themeSwitch.innerHTML = 'Dark Theme';
+  } else {
+    document.getElementById('body').classList.remove('body-light');
+    document
+      .getElementById('modal-header')
+      .classList.remove('modal-header-light');
+    document
+      .getElementById('grid')
+      .classList.remove('grid-light', 'square-light');
+    themeSwitch.innerHTML = 'Light Theme';
+  }
+};
