@@ -123,6 +123,10 @@ header {
   }
 }
 
+#start-modal {
+  z-index: 1;
+}
+
 .grid {
   margin: 5vh auto;
   padding: 5px;

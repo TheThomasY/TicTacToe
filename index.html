@@ -10,8 +10,19 @@
   <body id="body">
     <header>
       <h1>Tic Tac Toe</h1>
-      <div class="player-turn">It's <span id="to-go"></span>'s go:</div>
+      <div class="player-turn">It's <span id="to-go"></span></div>
     </header>
+    <div style="display: block" class="modal" id="start-modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Welcome to Tic Tac Toe</h2>
+        </div>
+        <div class="modal-button">
+          <button onclick="startGame(1)">Play the computer</button>
+          <button onclick="startGame(2)">Play a friend</button>
+        </div>
+      </div>
+    </div>
     <div class="modal" id="winner-modal">
       <div class="modal-content">
         <div class="modal-header" id="modal-header">
@@ -24,19 +35,19 @@
     </div>
     <table class="grid" id="grid">
       <tr>
-        <td onclick="squareClicked(this)" class="square" id="1"></td>
-        <td onclick="squareClicked(this)" class="square" id="2"></td>
-        <td onclick="squareClicked(this)" class="square" id="3"></td>
+        <td onclick="squareClicked(this, 'player')" class="square" id="1"></td>
+        <td onclick="squareClicked(this, 'player')" class="square" id="2"></td>
+        <td onclick="squareClicked(this, 'player')" class="square" id="3"></td>
       </tr>
       <tr>
-        <td onclick="squareClicked(this)" class="square" id="4"></td>
-        <td onclick="squareClicked(this)" class="square" id="5"></td>
-        <td onclick="squareClicked(this)" class="square" id="6"></td>
+        <td onclick="squareClicked(this, 'player')" class="square" id="4"></td>
+        <td onclick="squareClicked(this, 'player')" class="square" id="5"></td>
+        <td onclick="squareClicked(this, 'player')" class="square" id="6"></td>
       </tr>
       <tr>
-        <td onclick="squareClicked(this)" class="square" id="7"></td>
-        <td onclick="squareClicked(this)" class="square" id="8"></td>
-        <td onclick="squareClicked(this)" class="square" id="9"></td>
+        <td onclick="squareClicked(this, 'player')" class="square" id="7"></td>
+        <td onclick="squareClicked(this, 'player')" class="square" id="8"></td>
+        <td onclick="squareClicked(this, 'player')" class="square" id="9"></td>
       </tr>
     </table>
 

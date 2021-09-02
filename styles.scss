@@ -132,6 +132,12 @@ header {
   }
 }
 
+// Start modal ----
+
+#start-modal {
+  z-index: 1;
+}
+
 // Game grid ----
 .grid {
   margin: 5vh auto;
