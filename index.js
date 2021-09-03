@@ -26,8 +26,9 @@ const startGame = (players) => {
     computer = true;
     document.getElementById('to-go').innerHTML = 'your turn (' + next + '):';
     if (Math.round(Math.random()) === 0) {
-      let randomSquare = pickRandomSquare();
-      squareClicked(document.getElementById(randomSquare));
+      let randomSquare = empty[Math.floor(Math.random() * empty.length)];
+      squareClicked(document.getElementById(randomSquare), 'computer');
+      document.getElementById('to-go').innerHTML = 'your turn (' + next + '):';
     }
   }
 };
@@ -77,6 +78,7 @@ const squareClicked = (square, clickedBy) => {
       document.getElementById(smartComputerPicks(next)),
       'computer'
     );
+    document.getElementById('to-go').innerHTML = 'your turn (' + next + '):';
   }
 };
 
@@ -124,14 +126,9 @@ const checkWinner = (locations) => {
     let regex = new RegExp(regexStr, 'g');
     // Regex looks like: /1|2|3/g
     if (regex.test(locations)) {
-      if (locations.match(regex).length === 3) {
-        console.log('WIN HERE ------------');
-        return 'win';
-      }
+      if (locations.match(regex).length === 3) return 'win';
     }
-    if (locations.length === 5) {
-      return 'draw';
-    }
+    if (locations.length === 5) return 'draw';
   }
 };
 
