@@ -57,17 +57,13 @@ const squareClicked = (square, clickedBy) => {
     oLocations += square.id;
   }
 
-  // Now 'next' is for the player about to
-  let locations = oLocations;
-  if (next === 'O') {
-    // set locations to previous go to check winner
-    locations = xLocations;
-  }
+  // Now 'next' is for the player about to go
+  // 'locations' is for the turn that just happened
+  let locations = next === 'O' ? xLocations : oLocations;
 
   if (checkWinner(locations) === 'win') {
     gameOver(square.innerHTML, clickedBy);
-  }
-  if (checkWinner(locations) === 'draw') {
+  } else if (checkWinner(locations) === 'draw') {
     gameOver('', '');
   }
 
@@ -90,14 +86,9 @@ const smartComputerPicks = (next) => {
   let id = empty[Math.floor(Math.random() * empty.length)];
 
   // Locations of the computer pieces
-  let testPlay = oLocations;
+  let testPlay = (next = 'X' ? xLocations : oLocations);
   // Locations of the player pieces
-  let opponentPlay = xLocations;
-  // Swap if necessary
-  if (next === 'X') {
-    testPlay = xLocations;
-    opponentPlay = oLocations;
-  }
+  let opponentPlay = (next = 'X' ? oLocations : xLocations);
 
   // Check to see if computer can win
   for (let i = 0; i < empty.length; i++) {
@@ -128,8 +119,8 @@ const checkWinner = (locations) => {
     if (regex.test(locations)) {
       if (locations.match(regex).length === 3) return 'win';
     }
-    if (locations.length === 5) return 'draw';
   }
+  if (empty.length === 0) return 'draw';
 };
 
 const gameOver = (winner, clickedBy) => {
