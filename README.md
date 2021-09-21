@@ -1,6 +1,6 @@
 <h1 align="center">Tic Tac Toe</h1>
 
-<p align="center">A simple game of tic tac toe built with vanilla Javascript. You can play against a friend locally, or against the AI</p>
+<p align="center">A simple game of tic tac toe built with vanilla Javascript. You can play against a friend locally, or against the AI. There is also the option to switch between light and dark colour theme.</p>
 
 ## Links 🌟
 
