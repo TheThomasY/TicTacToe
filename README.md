@@ -1,8 +1,12 @@
-# TicTacToe
+<h1 align="center">Tic Tac Toe</h1>
 
-Tic Tac Toe game built with vanilla JavaScript. Try it for yourself here: https://thethomasy.github.io/TicTacToe/.
+<p align="center">A simple game of tic tac toe built with vanilla Javascript. You can play against a friend locally, or against the (fairly basic) AI</p>
 
-### Screenshot
+## Links
+
+- [Live](https://thethomasy.github.io/TicTacToe/ "Live View")
+
+## Screenshots
 
 ![](./screenshots/screenshot-dark.png)
 
