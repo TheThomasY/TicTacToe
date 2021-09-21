@@ -30,5 +30,6 @@
 - [Github Profile 👨‍💻](https://github.com/TheThomasY)
 - [Email ✉](mailto:tomyoungdev@gmail.com?subject=Hi "Hi!")
 - [LinkedIn 💼](https://www.linkedin.com/in/tom-young5555/)
+- [Dev.to 🖊](https://dev.to/thetomy)
 
 Give a ⭐️ if you like this project!
