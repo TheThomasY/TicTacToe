@@ -4,7 +4,7 @@
 
 ## Links 🌟
 
-- [Try it out here 💻](https://thethomasy.github.io/TicTacToe/ "Live View")
+- Live site: [Try it out here 💻](https://thethomasy.github.io/TicTacToe/ "Live View")
 
 ## Screenshots 📷
 
@@ -15,8 +15,13 @@
 ## Built With 🛠
 
 - HTML
-- CSS
+- SASS
 - JavaScript
+
+## Future Updates 🎁
+
+- [ ] Cleaner implementation of the theme switcher
+- [ ] Smarter AI
 
 ## Author 🧑
 
