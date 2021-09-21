@@ -4,7 +4,7 @@
 
 ## Links
 
-- [Try it out here](https://thethomasy.github.io/TicTacToe/ "Live View")
+- [Try it out here 💻](https://thethomasy.github.io/TicTacToe/ "Live View")
 
 ## Screenshots
 
