@@ -2,23 +2,23 @@
 
 <p align="center">A simple game of tic tac toe built with vanilla Javascript. You can play against a friend locally, or against the AI</p>
 
-## Links
+## Links 🌟
 
 - [Try it out here 💻](https://thethomasy.github.io/TicTacToe/ "Live View")
 
-## Screenshots
+## Screenshots 📷
 
 ![](./screenshots/screenshot-dark.png)
 
 ![](./screenshots/screenshot-light.png)
 
-## Built With
+## Built With 🛠
 
 - HTML
 - CSS
 - JavaScript
 
-## Author
+## Author 🧑
 
 **Tom Young**
 
