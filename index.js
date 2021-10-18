@@ -86,9 +86,9 @@ const smartComputerPicks = (next) => {
   let id = empty[Math.floor(Math.random() * empty.length)];
 
   // Locations of the computer pieces
-  let testPlay = (next = 'X' ? xLocations : oLocations);
+  let testPlay = next === 'X' ? xLocations : oLocations;
   // Locations of the player pieces
-  let opponentPlay = (next = 'X' ? oLocations : xLocations);
+  let opponentPlay = next === 'X' ? oLocations : xLocations;
 
   // Check to see if computer can win
   for (let i = 0; i < empty.length; i++) {
