@@ -10,7 +10,7 @@ A simple game of tic tac toe built with vanilla Javascript. You can play against
 
 ![](./screenshots/screenshot-dark.png)
 
-![](./screenshots/screenshot-light.png)
+<!-- ![](./screenshots/screenshot-light.png) -->
 
 ## Built With 🛠
 
